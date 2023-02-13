@@ -15,6 +15,10 @@ calcButton.addEventListener('click', function(){
     let weight = `${inputWeight.value}`;
     let height = `${inputHeight.value}`;
 
+    // Removing Kg and m
+    weight = weight.replace(/[^\d.-]/g, '');
+    height = height.replace(/[^\d.-]/g, '');
+
     //bmi formula
     let bmi = weight / (height * height);
     bmi = Math.round(bmi * 10) / 10
