@@ -70,8 +70,5 @@ calcButton.addEventListener('click', function(){
         
     }
 
-    // inputHeight.value = ""
-    // inputWeight.value = ""
-   
 })
 
