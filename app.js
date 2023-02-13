@@ -6,17 +6,20 @@ const calcButton = document.querySelector('#calc')
 const container = document.querySelector('.container')
 const filValue = document.querySelector('.fill-value')
 const form = document.querySelector('.form')
+const discard = document.querySelectorAll('#discard')
 
-
+// Event Listeners
 calcButton.addEventListener('click', function(){
     
+    //Retrieving data from Form
     let weight = `${inputWeight.value}`;
     let height = `${inputHeight.value}`;
 
-
+    //bmi formula
     let bmi = weight / (height * height);
     bmi = Math.round(bmi * 10) / 10
 
+    //Creating area to print result
     let resultArea = document.createElement('div');
     resultArea.classList.add('resultArea');
 
@@ -64,6 +67,8 @@ calcButton.addEventListener('click', function(){
     reloadBtn.innerText = 'Calculate BMI'
     buttonArea.appendChild(reloadBtn)
 
+
+    //Interpreting Results & Conditions
     if (bmi < 18.5){
         result.innerText = "BMI falls within the Underweight range."
         counsel.innerText = "Consume High-protein and whole-grain carbohydrate snacks can help a person gain weight. Examples include peanut butter crackers, protein bars, trail mix, pita chips and hummus, or a handful of almonds. Eating several small meals a day. Sometimes a person may be underweight because they cannot tolerate eating large meals."
@@ -85,6 +90,7 @@ calcButton.addEventListener('click', function(){
         counsel.innerText = "Please visit your nearest clinic. Also consider one of the following: Changing your habits, Weight-management programs, Weight-loss medicines, Weight-loss devices, Bariatric surgery, Special diets."
     }
 
+    // Complete form security & Print result condition
     if (inputHeight.value === "" || inputWeight.value === "") {
         filValue.innerText = "Fill all values to proceed"
         filValue.style.color = "red"
@@ -95,12 +101,9 @@ calcButton.addEventListener('click', function(){
         form.style.display = "none"
     }
 
-    inputHeight.value = ""
-    inputWeight.value = ""
-
+    //Reload page to calculate new BMI & discard old results
     reloadBtn.addEventListener('click', function(){
-        resultArea.style.display = "none"
-        location.reload()
+        location.reload()  
     })
 })
 

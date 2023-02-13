@@ -6,15 +6,27 @@
 }
 
 body{
-    background: url('img.jpg') no-repeat center center/cover;
-    padding: 50px;
+    background: url('img.jpg') no-repeat center center/cover ;
+    padding: 50px 0px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 5px;
+    background-color: #646363;
+    background-blend-mode: multiply;
 }
 
+.main-heading{
+    color: white;
+    margin-bottom: 30px;
+}
+
+.author{
+    color: white;
+    margin-top: 20px;
+}
 
 .form{
     width: 400px;
@@ -25,17 +37,12 @@ body{
     flex-direction: column;
 }
 
-.resultArea{
-    width: 400px;
-    padding: 50px 30px;
-    background-color: rgb(246, 246, 248);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
+.input-p{
+    margin-bottom: 5px;
 }
 
-.resultAreaHeading{
+.fillForm{
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -63,15 +70,30 @@ body{
     cursor: pointer;
 }
 
-.buttonArea{
+.resultArea{
+    width: 400px;
+    padding: 50px 30px;
+    background-color: rgb(246, 246, 248);
+    border-radius: 5px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.resultAreaHeading{
+    margin-bottom: 20px;
 }
 
 h3{
     font-size: 20px;
     margin-bottom: 2px;
 }
+
+.buttonArea{
+    display: flex;
+    justify-content: center;
+}
+
 
 .resultArea p{
     margin-bottom: 20px;
@@ -88,21 +110,30 @@ h3{
     cursor: pointer;
 }
 
-.main-heading{
-    color: white;
-    margin-bottom: 30px;
+
+@media  (max-width : 450px){
+    
+    .form{
+        width: 350px;
+        padding: 40px 20px;
+    }
+
+    
+.resultArea{
+    width: 350px;
+    padding: 40px 20px;
+}
 }
 
-.author{
-    color: white;
-    margin-top: 20px;
-}
+@media  (max-width : 380px){
+    .form{
+        width: 300px;
+        padding: 40px 20px;
+    }
 
-.input-p{
-    margin-bottom: 5px;
+    
+.resultArea{
+    width: 300px;
+    padding: 30px 15px;
 }
-
-.fillForm{
-    text-align: center;
-    margin-bottom: 20px;
 }
