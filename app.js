@@ -4,9 +4,13 @@ const inputWeight = document.querySelector('#input-weight')
 const inputHeight = document.querySelector('#input-height')
 const calcButton = document.querySelector('#calc')
 const container = document.querySelector('.container')
-const filValue = document.querySelector('.fill-value')
+const fillValue = document.querySelector('.fill-value')
 const form = document.querySelector('.form')
-const discard = document.querySelectorAll('#discard')
+const resultArea = document.querySelector('.resultArea')
+const bmiResult = document.querySelector('.bmiResult');
+const result = document.querySelector('.result');
+const counsel = document.querySelector('.counsel');
+
 
 // Event Listeners
 calcButton.addEventListener('click', function(){
@@ -21,55 +25,15 @@ calcButton.addEventListener('click', function(){
 
     //bmi formula
     let bmi = weight / (height * height);
+
+    //Round to 1 decimal point
     bmi = Math.round(bmi * 10) / 10
-
-    //Creating area to print result
-    let resultArea = document.createElement('div');
-    resultArea.classList.add('resultArea');
-
-    let resultAreaHeading = document.createElement('h2');
-    resultAreaHeading.classList.add('resultAreaHeading');
-    resultAreaHeading.innerText = "Results:";
-    resultAreaHeading.style.textAlign = 'center'
-    resultArea.appendChild(resultAreaHeading);
-
-    let bmiHeading = document.createElement('h3');
-    bmiHeading.classList.add('bmiHeading');
-    bmiHeading.innerText = "BMI:";
-    resultArea.appendChild(bmiHeading);
-
-    let bmiResult = document.createElement('p');
-    bmiResult.classList.add('bmiResult');
+    
+    //Print Result
     bmiResult.innerText = bmi + "kg/m2";
-    resultArea.appendChild(bmiResult);
-
-    let resultHeading = document.createElement('h3');
-    resultHeading.classList.add('resultHeading');
-    resultHeading.innerText = "Weight Class:";
-    resultArea.appendChild(resultHeading);
-
-    let result = document.createElement('p');
-    result.classList.add('result');
-    resultArea.appendChild(result);
+   
+    //Styling Error
     result.style.color = 'red'
-
-    let counselHeading = document.createElement('h3');
-    counselHeading.classList.add('counselHeading');
-    counselHeading.innerText = "Counsel:";
-    resultArea.appendChild(counselHeading);
-
-    let counsel = document.createElement('p');
-    counsel.classList.add('counsel');
-    resultArea.appendChild(counsel);
-
-    let buttonArea = document.createElement('div');
-    buttonArea.classList.add('buttonArea');
-    resultArea.appendChild(buttonArea)
-
-    let reloadBtn = document.createElement('button')
-    reloadBtn.classList.add('reloadBtn')
-    reloadBtn.innerText = 'Calculate BMI'
-    buttonArea.appendChild(reloadBtn)
 
 
     //Interpreting Results & Conditions
@@ -96,18 +60,18 @@ calcButton.addEventListener('click', function(){
 
     // Complete form security & Print result condition
     if (inputHeight.value === "" || inputWeight.value === "") {
-        filValue.innerText = "Fill all values to proceed"
-        filValue.style.color = "red"
-        filValue.style.fontStyle = "italic"
-        filValue.style.marginBottom = "20px"
+        fillValue.innerText = "Fill all values to proceed"
+        fillValue.style.color = "red"
+        fillValue.style.fontStyle = "italic"
+        fillValue.style.marginBottom = "20px"
+        resultArea.style.display = "none"
     } else {
-        container.appendChild(resultArea)
-        form.style.display = "none"
+        resultArea.style.display = "flex"
+        
     }
 
-    //Reload page to calculate new BMI & discard old results
-    reloadBtn.addEventListener('click', function(){
-        location.reload()  
-    })
+    // inputHeight.value = ""
+    // inputWeight.value = ""
+   
 })
 
