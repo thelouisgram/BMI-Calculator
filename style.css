@@ -7,8 +7,7 @@
 
 body{
     min-height: 100vh;
-    background-color: #e0e0e0;
-    background: url(wave-haikei.svg) no-repeat center center/cover;
+    background-color: #002233;
 }
 
 .header{
@@ -28,7 +27,7 @@ body{
 
 .main-heading{
     color: black;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 .author{
@@ -76,7 +75,7 @@ body{
     background-color: transparent;
     border-radius: 3px;
     border: 1px solid #d3d0d0;
-    font-size: 15px;
+    font-size: 1rem;
     color: black;
     cursor: pointer;
 }
@@ -98,7 +97,7 @@ body{
 }
 
 h3{
-    font-size: 20px;
+    font-size: 1rem;
     margin-bottom: 2px;
 }
 
@@ -112,22 +111,9 @@ h3{
     margin-bottom: 20px;
 }
 
-.reloadBtn{
-    padding: 5px 10px;
-    width: 120px;
-    background-color: transparent;
-    border-radius: 3px;
-    border: 1px solid #d3d0d0;
-    font-size: 15px;
-    color: rgb(2, 2, 49);
-    cursor: pointer;
-}
-
 
 @media  (max-width : 450px){
-    body{
-        background: url(wave-haikei\ \(1\).svg) no-repeat center center/cover;
-}
+    
     }
     .form{
         width: 350px;
@@ -139,7 +125,7 @@ h3{
     width: 350px;
     padding: 40px 20px;
 }
-}
+
 
 @media  (max-width : 380px){
     .form{
