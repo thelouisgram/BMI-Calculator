@@ -1,6 +1,7 @@
 # BMI-Calculator
 Personal Project: A Javascript based project
 
+https://thelouisgram.github.io/BMI-Calculator/
 
 Created with HTML, JAVASCRIPT & CSS.
 
