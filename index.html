@@ -11,22 +11,22 @@
 <div class="header"><h1 class="main-heading">
     BMI CALCULATOR
 </h1></div>
-<body>
-    
+<body>   
     <div class="container">
-
         <div class="form">
         
          <h2 class="fillForm">Fill the Form Below</h2>
-        <p class="input-p">Enter your Weight(kg)</p>
-        <input type="text" placeholder="Weight(kg)" id="input-weight">
-        <p class="input-p">Enter your Height(m)</p>
-        <input type="text" placeholder="Height(m)" id="input-height">
+         <fieldset>
+        <label for="input-weight"class="input-p">Enter your Weight(kg)</label>
+        <input type="text" placeholder="Weight(kg)" id="input-weight" name="weight" required>
+        <label for="input-height"class="input-p">Enter your Height(m)</label>
+        <input type="text" placeholder="Height(m)" id="input-height" name="height" required >
         <p class="fill-value"></p>
         <div class="button-area">
-        <button id="calc">Calculate BMI</button>
+        <button type="submit" id="calc" action="#" method="get">Calculate BMI</button>
         </div>
         </div>
+       
 
         <div class="resultArea">
             <h2 class="resultAreaHeading">Results:</h2>

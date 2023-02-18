@@ -8,7 +8,7 @@
 
 body{
     min-height: 100vh;
-    background-color: #002233;
+    background-color: #f5f0f0;
 }
 
 .header{
@@ -31,8 +31,14 @@ body{
     font-size: 1.2rem;
 }
 
+fieldset{
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
 .author{
-    color: white;
+    color: black;
     margin-top: 20px;
     text-align: center;
     margin-bottom: 40px;
@@ -44,8 +50,8 @@ body{
     padding: 50px 30px;
     background-color: #f6f6f8;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
+    
+    
 }
 
 .input-p{
@@ -72,7 +78,6 @@ body{
 
 #calc{
     padding: 5px 10px;
-    width: ;
     background-color: transparent;
     border-radius: 3px;
     border: 1px solid #d3d0d0;
